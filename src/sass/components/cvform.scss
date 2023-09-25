@@ -1,0 +1,71 @@
+.CVform {
+    min-height: 130vh;
+    max-height: 200vh;
+    display: grid;
+    grid-template-rows: 15% 85%;
+
+    .personal {
+        background-color: #008080;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        @include respond(phone) {
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        h1 {
+            font-size: 3rem;
+            grid-row: 1 / 3;
+            grid-column: 1 / 5;
+            justify-self: center;
+            align-self: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        #number {
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+            display: grid;
+            place-items: center;
+
+            @include respond(phone) {
+                grid-row: 3 / 4;
+                grid-column: 1 / 3;
+            }
+        }
+
+        #email {
+            grid-row: 3 / 4;
+            grid-column: 2 / 3;
+            display: grid;
+            place-items: center;
+
+            
+            @include respond(phone) {
+                grid-row: 3 / 4;
+                grid-column: 3 / 5;
+            }
+        }
+
+        #location {
+            grid-row: 3 / 4;
+            grid-column: 3 / 4;
+            display: grid;
+            place-items: center;
+
+            @include respond(phone) {
+                grid-row: 4 / 5;
+                grid-column: 1 / 5;
+            }
+        }
+    }
+
+    .rest {
+        background-color: #fff;
+    }
+}

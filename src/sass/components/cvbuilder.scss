@@ -12,7 +12,7 @@
     height: 45rem;
     width: 50%;
     border-radius: 1rem;
-    background-color: #30b3ff;
+    background-color: #008080;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
     @include respond(phone) {
@@ -69,6 +69,7 @@
       display: block;
       box-sizing: border-box;
       padding: 0.5rem 0.75rem;
+      border: none;
 
       &:focus {
         border: 2px solid #3da1ff;
@@ -81,7 +82,7 @@
     margin-top: 5rem;
     width: 50%;
     border-radius: 1rem;
-    background-color: #30b3ff;
+    background-color: teal;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
     @include respond(phone) {
@@ -106,6 +107,7 @@
     .forms {
       height: 45rem;
       display: grid;
+      
 
       label {
         font-size: 1.5rem;
@@ -144,6 +146,7 @@
         display: block;
         box-sizing: border-box;
         padding: 0.5rem 0.75rem;
+        border: none;
 
         &:focus {
           border: 2px solid #3da1ff;
@@ -200,7 +203,7 @@
     margin-top: 5rem;
     width: 50%;
     border-radius: 1rem;
-    background-color: #30b3ff;
+    background-color: teal;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
     @include respond(phone) {
@@ -263,6 +266,7 @@
         display: block;
         box-sizing: border-box;
         padding: 0.5rem 0.75rem;
+        border: none;
 
         &:focus {
           border: 2px solid #3da1ff;

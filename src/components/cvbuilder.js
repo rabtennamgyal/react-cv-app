@@ -4,7 +4,6 @@ function CVbuidler() {
   const [cardOpen, setCardOpen] = useState(false);
   const [cardOpen2, setCardOpen2] = useState(false);
 
-  // this function opens the card and displays the input fields
   function openCard() {
     if (cardOpen) {
       setCardOpen(!cardOpen);

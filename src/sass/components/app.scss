@@ -3,5 +3,9 @@
     max-height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-color: #060707;
+    background-color: #000;
+
+    @include respond(phone) {
+        grid-template-columns: 40% 60%;
+    }
 }
