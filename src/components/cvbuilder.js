@@ -2,15 +2,22 @@ import { useState } from "react";
 
 function CVbuidler() {
   const [cardOpen, setCardOpen] = useState(false);
+  const [cardOpen2, setCardOpen2] = useState(false);
 
   // this function opens the card and displays the input fields
   function openCard() {
-    setCardOpen(!cardOpen);
-
     if (cardOpen) {
-      document.getElementById('education').style.height = '5rem'
+      setCardOpen(!cardOpen);
     } else if (!cardOpen) {
-      document.getElementById('education').style.height = '40rem'
+      setCardOpen(!cardOpen);
+    }
+  }
+
+  function openCard2() {
+    if (cardOpen) {
+      setCardOpen2(!cardOpen2);
+    } else if (!cardOpen) {
+      setCardOpen2(!cardOpen2);
     }
   }
 
@@ -69,6 +76,92 @@ function CVbuidler() {
 
             <label htmlFor="location">Location:</label>
             <input id="location"></input>
+
+            <div className="footer">
+              <button
+                className="btn"
+                id="edit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log("hi");
+                }}
+              >
+                Edit
+              </button>
+
+              <button
+                className="btn"
+                id="submit"
+                onClick={(e) => console.log("nice")}
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        )}
+      </form>
+
+      <form className="form" id="experience">
+        <h1>Experience</h1>
+
+        {!cardOpen2 && (
+          <p className="arrow" id="arrowdown" onClick={openCard2}>
+            &darr;
+          </p>
+        )}
+
+        {cardOpen2 && (
+          <p className="arrow" id="arrowup" onClick={openCard2}>
+            &uarr;
+          </p>
+        )}
+
+        {cardOpen2 && (
+          <div className="forms">
+            <label htmlFor="company">Institution:</label>
+            <input id="company"></input>
+
+            <label htmlFor="title">Job Title:</label>
+            <input id="title"></input>
+
+            <div className="dates">
+              <div className="date">
+                <label htmlFor="startDate">Start Date:</label>
+                <input id="startDate" type="date"></input>
+              </div>
+
+              <div className="date">
+                <label htmlFor="endDate">End Date:</label>
+                <input id="endDate" type="date"></input>
+              </div>
+            </div>
+
+            <label htmlFor="location">Location:</label>
+            <input id="location"></input>
+
+            <label htmlFor="desc">Description</label>
+            <textarea id="desc"></textarea>
+
+            <div className="footer">
+              <button
+                className="btn"
+                id="edit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log("hi");
+                }}
+              >
+                Edit
+              </button>
+
+              <button
+                className="btn"
+                id="submit"
+                onClick={(e) => console.log("nice")}
+              >
+                Submit
+              </button>
+            </div>
           </div>
         )}
       </form>
